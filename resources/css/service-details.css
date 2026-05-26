@@ -1,0 +1,445 @@
+/* SERVICE DETAILS PAGE STYLES */
+.service-details-page {
+  background-color: var(--light-bg);
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+.details-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Step Indicator */
+.details-container .step-indicator {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.details-container .step {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--light-text);
+  font-size: 0.95rem;
+}
+
+.details-container .step.active {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.details-container .step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.details-container .step:not(.active) .step-number {
+  background-color: #ddd;
+  color: var(--light-text);
+}
+
+/* Main Content */
+.details-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Selection Group */
+.selection-group {
+  margin-bottom: 2.5rem;
+}
+
+.selection-title {
+  font-size: 1.1rem;
+  color: var(--dark-text);
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+/* Date Picker */
+.date-picker {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+
+.date-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border: 2px solid #e0e0e0;
+  background-color: var(--white);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.date-button:hover {
+  border-color: var(--primary-color);
+}
+
+.date-button.active {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--white);
+}
+
+.date-day {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+  opacity: 0.7;
+}
+
+.date-button.active .date-day {
+  opacity: 1;
+}
+
+.date-num {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Time Grid */
+.time-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1rem;
+}
+
+.time-button {
+  padding: 0.875rem;
+  border: 2px solid #e0e0e0;
+  background-color: var(--white);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  color: var(--light-text);
+  font-size: 0.9rem;
+}
+
+.time-button:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.time-button.active {
+  background-color: #c5e7f0;
+  border-color: #40b8d6;
+  color: #1a6b8a;
+  font-weight: 600;
+}
+
+/* Therapist Selection */
+.therapist-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.therapist-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 2px solid #e0e0e0;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.therapist-card:hover {
+  border-color: var(--primary-color);
+  background-color: #fafafa;
+}
+
+.therapist-card.active {
+  border-color: var(--primary-color);
+  background-color: #f5f0e8;
+}
+
+.therapist-image {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+.therapist-info {
+  flex: 1;
+}
+
+.therapist-name {
+  font-size: 1rem;
+  color: var(--dark-text);
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+.therapist-role {
+  font-size: 0.85rem;
+  color: var(--light-text);
+  margin: 0;
+}
+
+.therapist-radio {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.therapist-card.active .therapist-radio {
+  border-color: var(--primary-color);
+  background-color: var(--primary-color);
+}
+
+.therapist-radio input {
+  display: none;
+}
+
+.therapist-card.active .therapist-radio::after {
+  content: '✓';
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+/* Footer */
+.details-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.btn-back {
+  background-color: transparent;
+  border: none;
+  color: var(--dark-text);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.btn-back:hover {
+  color: var(--primary-color);
+}
+
+.selected-info {
+  font-size: 0.9rem;
+  color: var(--light-text);
+  text-align: center;
+  flex: 1;
+}
+
+.btn-next {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.btn-next:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .details-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .details-footer {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .selected-info {
+    font-size: 0.85rem;
+  }
+
+  .date-picker {
+    gap: 0.75rem;
+  }
+
+  .date-button {
+    width: 60px;
+    height: 60px;
+    font-size: 0.85rem;
+  }
+
+  .time-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .details-content {
+    padding: 1.5rem;
+  }
+}
+
+/* Calendar Wrapper */
+.calendar-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/* Custom Calendar Styling */
+.custom-calendar {
+  width: 100%;
+  max-width: 350px;
+  padding: 1.5rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: var(--white);
+}
+
+.react-calendar {
+  width: 100% !important;
+  border: none !important;
+  font-family: inherit !important;
+}
+
+.react-calendar__wrapper {
+  flex-wrap: wrap;
+  padding: 0 !important;
+}
+
+.react-calendar__month-view__weekdays {
+  text-align: center;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 0.75rem;
+}
+
+.react-calendar__month-view__weekdays__weekday {
+  padding: 0.5rem 0 !important;
+  font-size: 0.8rem !important;
+  text-transform: uppercase !important;
+}
+
+.react-calendar__month-view__days {
+  display: grid !important;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+}
+
+.react-calendar__tile {
+  max-width: 100% !important;
+  padding: 0.75rem !important;
+  background-color: var(--white) !important;
+  border: 1px solid #e0e0e0 !important;
+  border-radius: 6px !important;
+  font-size: 0.9rem !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  color: var(--dark-text) !important;
+  margin: 0 !important;
+}
+
+.react-calendar__tile:hover {
+  border-color: var(--primary-color) !important;
+  background-color: #f9f9f9 !important;
+}
+
+.react-calendar__tile--now {
+  background-color: #ffe8cc !important;
+  border-color: var(--accent-color) !important;
+  font-weight: 600 !important;
+  color: var(--dark-text) !important;
+}
+
+.react-calendar__tile--active {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  color: var(--white) !important;
+  font-weight: 600 !important;
+}
+
+.react-calendar__tile--active:hover {
+  background-color: var(--secondary-color) !important;
+  border-color: var(--secondary-color) !important;
+}
+
+.react-calendar__tile--disabled {
+  background-color: #e8e8e8 !important;
+  color: #999 !important;
+  cursor: not-allowed !important;
+  opacity: 0.6 !important;
+}
+
+.react-calendar__navigation {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  margin-bottom: 1.5rem !important;
+  padding: 0 !important;
+}
+
+.react-calendar__navigation button {
+  background-color: transparent !important;
+  border: none !important;
+  color: var(--primary-color) !important;
+  cursor: pointer !important;
+  font-weight: 600 !important;
+  padding: 0.5rem 0.75rem !important;
+  border-radius: 4px !important;
+  transition: all 0.3s ease !important;
+}
+
+.react-calendar__navigation button:hover {
+  background-color: #f5f1ed !important;
+  color: var(--secondary-color) !important;
+}
+
+.react-calendar__navigation__label {
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+  color: var(--dark-text) !important;
+}
+
+.react-calendar__century-view,
+.react-calendar__decades-view,
+.react-calendar__year-view {
+  padding: 0 !important;
+}
