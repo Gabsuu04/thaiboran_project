@@ -6,6 +6,9 @@ import HomePage from './pages/HomePage'
 import ServicesPage from './pages/ServicesPage'
 import DetailsPage from './pages/DetailsPage'
 import ConfirmationPage from './pages/ConfirmationPage'
+import GalleryPage from './pages/GalleryPage'
+import AboutPage from './pages/AboutPage'
+import ContactPage from './pages/ContactPage'
 import '../css/index.css'
 import '../css/services.css'
 import '../css/service-details.css'
@@ -46,6 +49,9 @@ function AppContent() {
             />
           } 
         />
+        <Route path="/gallery" element={<GalleryPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactPage />} />
         <Route 
           path="/details" 
           element={
